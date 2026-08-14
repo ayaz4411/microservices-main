@@ -5,9 +5,11 @@ pipeline {
         stage('Build & Tag Docker Image') {
             steps {
                 script {
+                    dir('checkoutservice') {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         sh "docker build -t ayaz4411/currencyservice:latest ."
                     }
+                  }
                 }
             }
         }
