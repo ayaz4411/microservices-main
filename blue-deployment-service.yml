@@ -2,15 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: emailservice
+  name: emailservice-blue
+  labels:
+    app: emailservice
+    env: blue
 spec:
   selector:
     matchLabels:
       app: emailservice
+      env: blue
   template:
     metadata:
       labels:
         app: emailservice
+        env: blue
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
@@ -68,15 +73,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: checkoutservice
+  name: checkoutservice-blue
+  labels:
+    app: checkoutservice
+    env: blue
 spec:
   selector:
     matchLabels:
       app: checkoutservice
+      env: blue
   template:
     metadata:
       labels:
         app: checkoutservice
+        env: blue
     spec:
       serviceAccountName: default
       containers:
@@ -129,15 +139,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: recommendationservice
+  name: recommendationservice-blue
+  labels:
+    app: checkoutservice
+    env: blue
 spec:
   selector:
     matchLabels:
       app: recommendationservice
+      env: blue
   template:
     metadata:
       labels:
         app: recommendationservice
+        env: blue
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
@@ -185,15 +200,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: frontend-blue
+  labels:
+    app: frontend
+    env: blue
 spec:
   selector:
     matchLabels:
       app: frontend
+      env: blue
   template:
     metadata:
       labels:
         app: frontend
+        env: blue
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
@@ -283,15 +303,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: paymentservice
+  name: paymentservice-blue
+  labels:
+    app: paymentservice
+    env: blue
 spec:
   selector:
     matchLabels:
       app: paymentservice
+      env: blue
   template:
     metadata:
       labels:
         app: paymentservice
+        env: blue
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
@@ -335,15 +360,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: productcatalogservice
+  name: productcatalogservice-blue
+  labels:
+    app: productcatalogservice
+    env: blue
 spec:
   selector:
     matchLabels:
       app: productcatalogservice
+      env: blue
   template:
     metadata:
       labels:
         app: productcatalogservice
+        env: blue
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
@@ -387,15 +417,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cartservice
+  name: cartservice-blue
+  labels:
+    app: cartservice
+    env: blue
 spec:
   selector:
     matchLabels:
       app: cartservice
+      env: blue
   template:
     metadata:
       labels:
         app: cartservice
+        env: blue
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
@@ -440,16 +475,21 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: loadgenerator
+  name: loadgenerator-blue
+  labels:
+    app: loadgenerator
+    env: blue
 spec:
   selector:
     matchLabels:
       app: loadgenerator
+      env: blue
   replicas: 1
   template:
     metadata:
       labels:
         app: loadgenerator
+        env: blue
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
@@ -482,15 +522,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: currencyservice
+  name: currencyservice-blue
+  labels:
+    app: currencyservice
+    env: blue
 spec:
   selector:
     matchLabels:
       app: currencyservice
+      env: blue
   template:
     metadata:
       labels:
         app: currencyservice
+        env: blue
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
@@ -535,15 +580,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shippingservice
+  name: shippingservice-blue
+  labels:
+    app: shippingservice
+    env: blue
 spec:
   selector:
     matchLabels:
       app: shippingservice
+      env: blue
   template:
     metadata:
       labels:
         app: shippingservice
+        env: blue
     spec:
       serviceAccountName: default
       containers:
@@ -587,15 +637,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: redis-cart
+  name: redis-cart-blue
+  labels:
+    app: redis-cart
+    env: blue
 spec:
   selector:
     matchLabels:
       app: redis-cart
+      env: blue
   template:
     metadata:
       labels:
         app: redis-cart
+        env: blue
     spec:
       containers:
       - name: redis
