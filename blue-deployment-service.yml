@@ -373,6 +373,7 @@ spec:
     metadata:
       labels:
         app: productcatalogservice
+        env: blue
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
