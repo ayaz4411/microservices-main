@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: emailservice-blue
+  name: emailservice-green
   labels:
     app: emailservice
     env: green
@@ -73,7 +73,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: checkoutservice-blue
+  name: checkoutservice-green
   labels:
     app: checkoutservice
     env: green
@@ -139,7 +139,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: recommendationservice-blue
+  name: recommendationservice-green
   labels:
     app: checkoutservice
     env: green
@@ -200,7 +200,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend-blue
+  name: frontend-green
   labels:
     app: frontend
     env: green
@@ -303,7 +303,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: paymentservice-blue
+  name: paymentservice-green
   labels:
     app: paymentservice
     env: green
@@ -360,7 +360,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: productcatalogservice-blue
+  name: productcatalogservice-green
   labels:
     app: productcatalogservice
     env: green
@@ -417,7 +417,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cartservice-blue
+  name: cartservice-green
   labels:
     app: cartservice
     env: green
@@ -475,7 +475,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: loadgenerator-blue
+  name: loadgenerator-green
   labels:
     app: loadgenerator
     env: green
@@ -522,7 +522,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: currencyservice-blue
+  name: currencyservice-green
   labels:
     app: currencyservice
     env: green
@@ -580,7 +580,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: shippingservice-blue
+  name: shippingservice-green
   labels:
     app: shippingservice
     env: green
@@ -637,7 +637,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: redis-cart-blue
+  name: redis-cart-green
   labels:
     app: redis-cart
     env: green
